@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <div class="all-blogs"> 
+        <h2>All Blogs</h2>
+            <% if (act_blog.length>0){ %>
+                <% act_blog.forEach((new_blog)=>{ %>
+                    <h3><%= new_blog.title %></h3>
+                    <p><%= new_blog.blog_content %></p>
+                <% }); %>
+            <% } else{ %>
+                <p>no blogs to show</p>
+            <% } %>                 
+        <!-- </div> -->
+    </div>
+</body>
+</html>
